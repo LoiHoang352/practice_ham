@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function checkNumber(a, b, c){
+        let min 
+        if(a < b && a < c){
+            min = a
+        }else if( b < a && b < c){
+            min = b
+        }else(
+            min = c
+        )
+        return min
+    }
+    let number1 = +prompt('nhập số thứ 1: ')
+    let number2 = +prompt('nhập số thứ 2: ')
+    let number3 = +prompt('nhập số thứ 3: ')
+    console.log('số có giá trị nhỏ nhất là: ' + checkNumber(number1, number2, number3))
+</script>
+</html>
