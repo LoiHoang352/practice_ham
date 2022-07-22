@@ -11,12 +11,22 @@
 </body>
 <script>
     function arrFunction(){
-    let arr = [];
+    let arr = Array();
+    let number
         do{
-            let number = +prompt('nhập các số tròn mảng, nhập "q"để dừng lại:')
+            number = prompt('nhập các số tròn mảng, nhập "q"để dừng lại:');
+            if(number == 'q'){
+                break
+            }
+            if(isFinite(number) == false){
+                console.log('giá trị nhập vào phải là số')
+                break;
+            }
             arr.push(number)
-            console.log(arr)
-        }while(number != q);
+        }
+        while(number != 'q');
+        console.log('mảng ban đầu là: ')
+        console.log(arr)
 
         let firstNumber = 0;
         let lastNumber = arr.length -1 ;
@@ -26,8 +36,10 @@
             arr[lastNumber] = a;
             firstNumber++;
             lastNumber--;
-
         }
+        console.log('mảng sau khi đảo:' )
+        console.log(arr)
+
     }
     arrFunction()
 </script>
